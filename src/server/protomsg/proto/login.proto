@@ -1,0 +1,25 @@
+syntax = "proto2";
+package protomsg;
+
+// 创建游客账号请求500
+message tourist_req
+{
+}
+// 创建游客账号请求返回501
+message tourist_ack
+{
+   required int32  id = 1;  	 // 游客id
+   required string account = 2;  // 游客账号
+   required string password = 3; // 游客密码
+}
+// 游客账号登录502
+message tourist_login_req
+{
+   required int32  id = 1;  	 // 游客id
+   required string account = 2;  // 游客账号
+   required string password = 3; // 游客密码
+}
+// 游客账号登录返回503
+message tourist_login_ack
+{
+}

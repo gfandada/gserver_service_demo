@@ -1,0 +1,17 @@
+syntax = "proto2";
+package protomsg;
+
+// 开始匹配请求1500
+message match_req
+{
+   required int32 fighttype = 1; // 战斗类型3v3....
+}
+// 匹配成功推送1501
+message match_push
+{
+   required int32 fighttype = 1;      // 战斗类型3v3....
+   required string fightid = 2;  	  // 战斗id
+   required int32 playertype = 3;     // 阵营标识
+   repeated int32 reds = 4;           // 红色方成员
+   repeated int32 blues = 5;          // 蓝色方成员
+}

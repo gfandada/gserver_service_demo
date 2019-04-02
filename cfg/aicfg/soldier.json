@@ -1,0 +1,98 @@
+{
+  "id": "3e22dc8f-7cca-4d41-8dd5-6de639fdd9e8",
+  "title": "soldier",
+  "description": "soldier ai tree",
+  "root": "6974f46b-e398-4de1-8f43-1f5e2f3f0ff7",
+  "properties": {},
+  "nodes": {
+    "6974f46b-e398-4de1-8f43-1f5e2f3f0ff7": {
+      "id": "6974f46b-e398-4de1-8f43-1f5e2f3f0ff7",
+      "name": "Repeater",
+      "title": "Repeat <maxLoop>x",
+      "description": "",
+      "properties": {
+        "maxLoop": 1
+      },
+      "display": {
+        "x": -132,
+        "y": -48
+      },
+      "child": "c45168a6-8645-48f6-885a-b6149c0702c6"
+    },
+    "c45168a6-8645-48f6-885a-b6149c0702c6": {
+      "id": "c45168a6-8645-48f6-885a-b6149c0702c6",
+      "name": "Sequence",
+      "title": "sequence",
+      "description": "sequence",
+      "properties": {},
+      "display": {
+        "x": 0,
+        "y": -48
+      },
+      "children": [
+        "b73c109b-fb16-4154-a135-9d680b354a48",
+        "48e4f4e9-d282-44db-9d4c-4039b121c82d"
+      ]
+    },
+    "b73c109b-fb16-4154-a135-9d680b354a48": {
+      "id": "b73c109b-fb16-4154-a135-9d680b354a48",
+      "name": "SoldierInstanceCondition",
+      "title": "距离",
+      "description": "",
+      "properties": {
+        "instance": 4
+      },
+      "display": {
+        "x": 156,
+        "y": -96
+      }
+    },
+    "48e4f4e9-d282-44db-9d4c-4039b121c82d": {
+      "id": "48e4f4e9-d282-44db-9d4c-4039b121c82d",
+      "name": "SoldierAttackAction",
+      "title": "攻击",
+      "description": "",
+      "properties": {
+        "attack": 2
+      },
+      "display": {
+        "x": 156,
+        "y": 0
+      }
+    }
+  },
+  "display": {
+    "camera_x": 640,
+    "camera_y": 307,
+    "camera_z": 1.25,
+    "x": -264,
+    "y": -48
+  },
+  "custom_nodes": [
+    {
+      "name": "decotator",
+      "category": "decorator",
+      "title": "decotator",
+      "description": null,
+      "properties": {}
+    },
+    {
+      "name": "SoldierAttackAction",
+      "category": "action",
+      "title": "攻击",
+      "description": null,
+      "properties": {
+        "attack": 2
+      }
+    },
+    {
+      "name": "SoldierInstanceCondition",
+      "category": "condition",
+      "title": "距离",
+      "description": null,
+      "properties": {
+        "instance": 4
+      }
+    }
+  ]
+}

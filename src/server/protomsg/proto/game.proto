@@ -1,0 +1,18 @@
+syntax = "proto2";
+package protomsg;
+
+// 广播测试2000
+message test_req
+{
+   required  bytes  test = 1;
+}
+// 广播测试返回2001
+message test_ack
+{
+   required  bytes   test = 1;
+}
+// 广播测试推送2002
+message test_push
+{
+   required  bytes   test = 1;
+}

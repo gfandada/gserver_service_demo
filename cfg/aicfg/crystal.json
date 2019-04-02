@@ -1,0 +1,91 @@
+{
+  "id": "7b0a533d-f0fe-4c04-8968-4b30a013c9b4",
+  "title": "crystal ai tree",
+  "description": "",
+  "root": "a24d7281-9ac8-482c-b724-e68922d6b2a5",
+  "properties": {},
+  "nodes": {
+    "a24d7281-9ac8-482c-b724-e68922d6b2a5": {
+      "id": "a24d7281-9ac8-482c-b724-e68922d6b2a5",
+      "name": "Repeater",
+      "title": "Repeat <maxLoop>x",
+      "description": "",
+      "properties": {
+        "maxLoop": 1
+      },
+      "display": {
+        "x": -72,
+        "y": -12
+      },
+      "child": "11ac001f-19ee-4b0d-85b8-93d89a96093a"
+    },
+    "11ac001f-19ee-4b0d-85b8-93d89a96093a": {
+      "id": "11ac001f-19ee-4b0d-85b8-93d89a96093a",
+      "name": "Sequence",
+      "title": "Sequence",
+      "description": "",
+      "properties": {},
+      "display": {
+        "x": 60,
+        "y": -12
+      },
+      "children": [
+        "fa73231f-5f51-410e-851e-f400845a5ec9",
+        "90ff5d4a-2ef9-4627-8727-2bccfad5659b"
+      ]
+    },
+    "fa73231f-5f51-410e-851e-f400845a5ec9": {
+      "id": "fa73231f-5f51-410e-851e-f400845a5ec9",
+      "name": "CrystalInstanceCondition",
+      "title": "攻击距离",
+      "description": "",
+      "properties": {
+        "instance": 5
+      },
+      "display": {
+        "x": 228,
+        "y": -60
+      }
+    },
+    "90ff5d4a-2ef9-4627-8727-2bccfad5659b": {
+      "id": "90ff5d4a-2ef9-4627-8727-2bccfad5659b",
+      "name": "CrystalAttackAction",
+      "title": "普通攻击",
+      "description": "",
+      "properties": {
+        "attack": 10
+      },
+      "display": {
+        "x": 228,
+        "y": 36
+      }
+    }
+  },
+  "display": {
+    "camera_x": 640,
+    "camera_y": 307,
+    "camera_z": 1,
+    "x": -204,
+    "y": -12
+  },
+  "custom_nodes": [
+    {
+      "name": "CrystalInstanceCondition",
+      "category": "condition",
+      "title": "攻击距离",
+      "description": null,
+      "properties": {
+        "instance": 5
+      }
+    },
+    {
+      "name": "CrystalAttackAction",
+      "category": "action",
+      "title": "普通攻击",
+      "description": null,
+      "properties": {
+        "attack": 10
+      }
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "id": "40033e2d-8634-4baf-8fa1-a98c21eacd02",
+  "title": "tower ai tree",
+  "description": "",
+  "root": "7d8c922c-7013-49be-894a-dd4b79c70bab",
+  "properties": {},
+  "nodes": {
+    "7d8c922c-7013-49be-894a-dd4b79c70bab": {
+      "id": "7d8c922c-7013-49be-894a-dd4b79c70bab",
+      "name": "Repeater",
+      "title": "Repeat <maxLoop>x",
+      "description": "",
+      "properties": {
+        "maxLoop": 1
+      },
+      "display": {
+        "x": -156,
+        "y": 0
+      },
+      "child": "da0f1867-c3f4-4abf-9c44-b89f6ccc9443"
+    },
+    "da0f1867-c3f4-4abf-9c44-b89f6ccc9443": {
+      "id": "da0f1867-c3f4-4abf-9c44-b89f6ccc9443",
+      "name": "Sequence",
+      "title": "Sequence",
+      "description": "",
+      "properties": {},
+      "display": {
+        "x": -24,
+        "y": 0
+      },
+      "children": [
+        "e731eca7-315b-4764-af8e-5c2a794969c1",
+        "4f94b68a-0a6a-4dc6-817c-072d6c943e83"
+      ]
+    },
+    "e731eca7-315b-4764-af8e-5c2a794969c1": {
+      "id": "e731eca7-315b-4764-af8e-5c2a794969c1",
+      "name": "TowerInstanceCondition",
+      "title": "攻击距离",
+      "description": "",
+      "properties": {
+        "instance": 8
+      },
+      "display": {
+        "x": 120,
+        "y": -72
+      }
+    },
+    "4f94b68a-0a6a-4dc6-817c-072d6c943e83": {
+      "id": "4f94b68a-0a6a-4dc6-817c-072d6c943e83",
+      "name": "TowerAttackAction",
+      "title": "普通攻击",
+      "description": "",
+      "properties": {
+        "attack": 10
+      },
+      "display": {
+        "x": 120,
+        "y": 48
+      }
+    }
+  },
+  "display": {
+    "camera_x": 640,
+    "camera_y": 307,
+    "camera_z": 1,
+    "x": -288,
+    "y": 0
+  },
+  "custom_nodes": [
+    {
+      "name": "TowerAttackAction",
+      "category": "action",
+      "title": "普通攻击",
+      "description": null,
+      "properties": {
+        "attack": 10
+      }
+    },
+    {
+      "name": "TowerInstanceCondition",
+      "category": "condition",
+      "title": "攻击距离",
+      "description": null,
+      "properties": {
+        "instance": 8
+      }
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "id": "bfc0eac8-7415-4fba-a88d-cbca8cde57d3",
+  "title": "ship ai tree",
+  "description": "",
+  "root": "d8e73e34-a2cb-4252-ac1e-966f95e352eb",
+  "properties": {},
+  "nodes": {
+    "d8e73e34-a2cb-4252-ac1e-966f95e352eb": {
+      "id": "d8e73e34-a2cb-4252-ac1e-966f95e352eb",
+      "name": "Repeater",
+      "title": "Repeat <maxLoop>x",
+      "description": "",
+      "properties": {
+        "maxLoop": 1
+      },
+      "display": {
+        "x": -36,
+        "y": -24
+      },
+      "child": "ea5f35e6-7525-4c39-b804-33cc65dc9df4"
+    },
+    "ea5f35e6-7525-4c39-b804-33cc65dc9df4": {
+      "id": "ea5f35e6-7525-4c39-b804-33cc65dc9df4",
+      "name": "Sequence",
+      "title": "Sequence",
+      "description": "",
+      "properties": {},
+      "display": {
+        "x": 96,
+        "y": -24
+      },
+      "children": [
+        "cf52993c-e5fb-404f-80f2-1d4830ca5991",
+        "38de6618-72d7-48fc-80da-bdd95e9b7da6"
+      ]
+    },
+    "cf52993c-e5fb-404f-80f2-1d4830ca5991": {
+      "id": "cf52993c-e5fb-404f-80f2-1d4830ca5991",
+      "name": "ShipInstanceCondition",
+      "title": "距离",
+      "description": "",
+      "properties": {
+        "instance": 4
+      },
+      "display": {
+        "x": 240,
+        "y": -96
+      }
+    },
+    "38de6618-72d7-48fc-80da-bdd95e9b7da6": {
+      "id": "38de6618-72d7-48fc-80da-bdd95e9b7da6",
+      "name": "ShipAttackAction",
+      "title": "普通攻击",
+      "description": "",
+      "properties": {
+        "attack": 2
+      },
+      "display": {
+        "x": 252,
+        "y": 24
+      }
+    }
+  },
+  "display": {
+    "camera_x": 640,
+    "camera_y": 307,
+    "camera_z": 1,
+    "x": -168,
+    "y": -24
+  },
+  "custom_nodes": [
+    {
+      "name": "ShipInstanceCondition",
+      "category": "condition",
+      "title": "距离",
+      "description": null,
+      "properties": {
+        "instance": 4
+      }
+    },
+    {
+      "name": "ShipAttackAction",
+      "category": "action",
+      "title": "普通攻击",
+      "description": null,
+      "properties": {
+        "attack": 2
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+<seelog minlevel="debug" maxlevel="error">  
+    <outputs formatid="main">  
+        <buffered size="10000" flushperiod="1000">  
+            <rollingfile type="date" filename="../../log/db.log" datepattern="02.01.2006" maxrolls="30"/>  
+        </buffered>  
+    </outputs>  
+    <formats>  
+        <format id="main" format="%Date %Time [%LEV] [%RelFile line%Line] : %Msg%n"/>  
+    </formats>  
+</seelog> 

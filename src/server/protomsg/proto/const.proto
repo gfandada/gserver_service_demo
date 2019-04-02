@@ -1,0 +1,56 @@
+syntax = "proto2";
+package protomsg;
+
+enum TYPE {
+	// 1v1战斗
+	F1V1 = 1;
+	// 3v3战斗
+	F3V3 = 3;
+	// 5v5战斗
+	F5V5 = 5;
+}
+
+enum ENTITY {
+	// 中立方
+	NEUTRAL_FLAG      = 0;
+	// 蓝色方战船
+	BLUE_SHIP_FLAG    = 1;
+	// 红色方战船 
+	RED_SHIP_FLAG     = 2;  
+	// 蓝色方小兵
+	BLUE_SOLDIER_FLAG = 3;  
+	// 红色方小兵
+	RED_SOLDIER_FLAG  = 4;  
+	// 蓝色方防御塔
+	BLUE_TOWER_FLAG   = 5; 
+	// 红色方防御塔
+	RED_TOWER_FLAG    = 6; 
+	// 蓝色方水晶
+	BLUE_CRYSTAL      = 7;
+	// 红色方水晶
+	RED_CRYSTAL   	  = 8;
+}
+
+enum GameConst {
+	// 3v3战斗创建失败 
+	CREATE3V3FAILED = 1000;
+	// 3v3战斗id错误
+	FIGHTID3V3ERROR = 1001;
+	// 3v3战斗进程不存在
+	FIGHT3V3ERROR = 1002;
+	// 加入3v3战斗失败
+	JOIN3V3ERROR = 1003; 
+	// 获取3v3战斗双方失败
+	GET3V3ERROR = 1004;
+	// 实体id错误
+	ENTITYIDERROR = 1005;
+}
+
+enum SoldierStatus {
+	// 移动
+	MOVE = 1;
+	// 停止 
+	STOP = 2;
+	// 攻击 
+	ATTACK = 3;
+}

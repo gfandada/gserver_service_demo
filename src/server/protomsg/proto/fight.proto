@@ -1,0 +1,130 @@
+syntax = "proto2";
+package protomsg;
+
+message Vector2
+{
+    required float x = 1;
+    required float y = 2;
+}
+
+message AOI
+{
+	// 时间戳
+    required int64 time = 1;
+	// 位置
+   	required Vector2 pos = 2;
+	// 速度
+	required Vector2 v = 3;
+}
+
+message AOIPushItem
+{
+	required string entityid = 1;
+	required AOI ms = 2;
+}
+
+message SpawnState
+{
+	//实体类型
+	required int32 type = 1;
+	//实体id
+	required string entityid = 2;
+	//时间状态、位置状态
+	required AOI ms = 3;
+	//资源配置表id
+	optional int32 resId = 4;
+	//用户实体对应的整型用户id
+	optional int32 userId = 5;
+}
+// 创建战斗请求2100
+message create_fight_req
+{
+   required  string  fightid = 1;
+}
+// 创建战斗返回2101
+message create_fight_ack
+{
+}
+// 加入战斗请求2102
+message join_fight_req
+{
+	//战斗id
+   	required  string  fightid = 1; 
+	//玩家阵营
+	required int32   type = 2;    
+}
+//加入战斗返回2103
+message join_fight_ack
+{
+	repeated SpawnState spawns = 1;
+}
+// 推送的加入战斗的玩家2104
+message join_fight_push
+{
+	required SpawnState spawn = 1;
+}
+// 移动请求2105
+message move_req
+{
+    required Vector2 pos = 3;
+    required Vector2 v = 4;
+}
+// 移动推送2106
+message move_push
+{
+    repeated AOIPushItem aoi = 1;
+}
+// 攻击推送2107
+message attack_push
+{
+	// 攻击方
+    required string attack = 1;
+	// 被攻击方
+	required string attacked = 2;
+	//造成的伤害
+	required int32 damage = 3;
+	//被攻击方当前生命值
+	required int32 hp = 4;
+}
+//出生推送2108（玩家复活，刷怪、刷小兵，放水雷、导弹等）
+message spwan_push
+{
+	repeated SpawnState spwans = 1;
+}
+// 死亡结算
+message DeadSettlement{
+	// 死亡者
+	required string dead = 1;
+	// 击杀者
+	required string kill = 2;
+	// 助攻者
+	repeated string assists = 3;
+	// 击杀者最后造成的伤害
+	required int32 damage = 4;
+}
+// 死亡推送2109
+message dead_push
+{
+	repeated DeadSettlement death = 1;	
+}
+// 结束结算
+message EndSettlement{
+	// 实体id
+	required string entityid = 1;
+	// 击杀次数
+	required int32 kill = 2;
+	// 死亡次数
+	required int32 dead = 3;
+	// 助攻次数
+	required int32 assists = 4;
+}
+// 结束推送2110
+message over_push
+{
+	// 胜利的阵营
+	required int32  camp = 1;
+	// 红色方详情
+	repeated EndSettlement red = 2;
+	// 蓝色方详情
+	repeated EndSettlement blue = 3;
+}

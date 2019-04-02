@@ -1,0 +1,13 @@
+{
+	"MaxConnNum": 2048,
+	"PendingNum": 100,
+	"MaxMsgLen": 1024,
+	"MinMsgLen": 0,
+	"ReadDeadline":3600,
+	"WriteDeadline":60,
+	"ServerAddress": "10.12.103.67:1234",
+	"MaxHeader":1024,
+	"HttpTimeout": 10,
+	"CertFile": "",
+	"KeyFile": ""
+}
